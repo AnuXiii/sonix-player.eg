@@ -79,26 +79,6 @@
 		}
 	}
 
-	.para {
-		@apply text-lg text-white/80 text-justify md:text-left leading-10;
-	}
-
-	.list {
-		@apply mt-12 grid grid-cols-1 md:grid-cols-3 gap-8;
-	}
-
-	.list-box {
-		@apply gap-2 py-6 pl-4 pr-2 rounded-lg shadow-2xl shadow-black/10;
-	}
-
-	.list-icon {
-		@apply text-4xl;
-	}
-
-	.list-title {
-		@apply text-base tracking-wide;
-	}
-
 	/* for copy code secondarytion */
 	.pre {
 		@apply border border-solid border-white/20 rounded-lg bg-black;
