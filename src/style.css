@@ -149,7 +149,7 @@
 }
 
 .code-view-container {
-	@apply max-md:p-2 rounded-lg w-full lg:w-[800px] max-w-full h-max shadow-lg shadow-black/50 md:pt-10 md:pl-10;
+	@apply max-md:p-1 rounded-lg w-full lg:w-[800px] max-w-full h-max shadow-lg shadow-black/50 md:pt-10 md:pl-10;
 }
 
 .code-view {
@@ -225,7 +225,7 @@
 
 	&::after {
 		content: "";
-		@apply absolute right-0 bottom-0 bg-gradient-to-b from-primary via-transparent to-secondary w-1 h-full rounded-lg;
+		@apply absolute -right-1 bottom-0 bg-gradient-to-b from-primary via-transparent to-secondary w-1 h-full rounded-lg;
 	}
 }
 
