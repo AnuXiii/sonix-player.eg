@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/vite.svg" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=0" />
+		<title>Sonix Player</title>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<link
+			rel="stylesheet"
+			href="/src/style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<div class="wrapper bg-gradient-to-r from-black to-neutral-800">
+				<div class="wrapper-inner">
+					<!--  -->
+					<div class="grid-2 items-center">
+						<!--  -->
+						<div class="flex-column gap-12">
+							<header class="flex-column gap-4">
+								<p class="subtext">better audio players 🎧</p>
+								<h1 class="title primary-gradient">Sonix Player</h1>
+							</header>
+							<!--  -->
+							<div class="flex-column gap-4">
+								<pre class="pre flex-between-center gap-4">
+									<p class="label p-4">Install :</p>
+									<code class="code p-4">
+										<span class="text-lime-500">npm 
+											<span>i</span>
+										</span>
+										<span>sonix-player</span>
+									</code>
+									<button
+										class="copy-btn p-4 flex-center"
+										tabindex="0"
+										aria-label="copy code"
+										title="copy code">
+										<ion-icon name="clipboard-outline"></ion-icon>
+										<ion-icon name="checkmark-outline"></ion-icon>
+									</button>
+								</pre>
+							</div>
+							<!--  -->
+							<div class="mt-5">
+								<sonix-player
+									id="custom-color"
+									data-src="/sounds/manda-lina.mp4"
+									data-thumbnail="/images/manda-lina.jfif"
+									data-figure="/images/manda-lina.jfif"
+									data-artist="6YNTHMANE"
+									data-name="MANDA LINA"
+									data-volume="true"
+									data-repeat="true"
+									data-speed="true"
+									data-max="3"
+									data-download="true"
+									data-black=""
+									data-accent=""
+									data-primary=""
+									data-secondary="">
+								</sonix-player>
+							</div>
+						</div>
+						<!--  -->
+						<div class="code-view-container primary-gradient">
+							<div class="code-view">
+								<nav class="tabs">
+									<li role="listitem">
+										<button
+											class="tab-btn active"
+											aria-label="app.js"
+											title="app.js"
+											tabindex="0"
+											data-index="1">
+											Vite
+										</button>
+									</li>
+									<li role="listitem">
+										<button
+											class="tab-btn"
+											aria-label="app.jsx"
+											title="app.jsx"
+											tabindex="0"
+											data-index="2">
+											React
+										</button>
+									</li>
+									<li role="listitem">
+										<button
+											class="tab-btn"
+											aria-label="index.html"
+											title="index.html"
+											tabindex="0"
+											data-index="3">
+											HTML
+										</button>
+									</li>
+								</nav>
+								<div class="code-block">
+									<div
+										class="code-block-inner active"
+										data-index="1">
+										<pre>
+											<code class="flex flex-col gap-2">
+												<span class="text-white/50 select-none">main.js or app.js</span>
+												<p class="flex gap-2">
+													<span class="text-violet-400">import</span>
+													<span class="text-rose-400">SonixPlayer <span class="text-violet-400">from </span><span class="text-lime-400">"sonix-player"</span></span>
+												</p>
+												<p class="flex gap-2">
+													<span class="text-violet-400">import</span>
+													<span class="text-lime-400">"sonix-player/style.css"</span>
+												</p>
+												<p class="flex gap-2">
+													<span class="text-violet-400">const</span>
+													<span class="text-amber-400">player <span class="text-blue-400">= </span><span class="text-violet-400">new</span></span><span class="text-amber-400">SonixPlayer()</span>
+												</p>
+											</code>
+										</pre>
+										<pre>
+											<code>
+														<span class="text-white/50 select-none">Use the component anywhere in your app (HTML syntax)</span>
+														<span class="text-[#569cd6]">&lt;sonix-player</span>
+														<span class="ml-5 text-[#9cdcfe]">data-src</span>=<span class="text-[#ce9178]">"/phonk.mp4"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-thumbnail</span>=<span class="text-[#ce9178]">"/phonk.jpg"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-figure</span>=<span class="text-[#ce9178]">"/phonk.jpg"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-name</span>=<span class="text-[#ce9178]">"phonk"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-artist</span>=<span class="text-[#ce9178]">"phonk music"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-auto</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-volume</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-repeat</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-speed</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-max</span>=<span class="text-[#b5cea8]">"4"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-download</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-black</span>=<span class="text-[#ce9178]">"#121212"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-accent</span>=<span class="text-[#ce9178]">"#f50"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-primary</span>=<span class="text-[#ce9178]">"#121212"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-secondary</span>=<span class="text-[#ce9178]">"#ccc"</span><span class="text-[#9cdcfe]">&gt;</span>
+														<span class="text-[#569cd6]">&lt;/sonix-player&gt;</span>
+											</code>
+										</pre>
+									</div>
+									<!--  -->
+									<div
+										class="code-block-inner"
+										data-index="2">
+										<pre>
+											<code class="flex flex-col gap-2">
+												<span class="text-white/50 select-none">main.jsx or app.jsx</span>
+												<p class="flex gap-2">
+													<span class="text-violet-400">import</span>
+													<span class="text-rose-400">SonixPlayer <span class="text-violet-400">from </span><span class="text-lime-400">"sonix-player"</span></span>
+												</p>
+												<p class="flex gap-2">
+													<span class="text-violet-400">import</span>
+													<span class="text-lime-400">"sonix-player/style.css"</span>
+												</p>
+											</code>
+										</pre>
+										<pre>
+											<code>
+														<span class="text-white/50 select-none">Anywhere in your component JSX</span>
+														<span class="text-violet-400">function </span><span class="text-blue-400">MyPlayer</span><span>()</span><span> {</span>
+														<span class="ml-5 text-blue-400">return </span><span>(</span>
+														<span class="ml-10 text-white/90">&lt;sonix-player</span>
+														<span class="ml-15 text-rose-400">data-src</span><span class="text-white/90">=</span><span class="text-lime-400">"/phonk-song.mp3"</span>
+														<span class="ml-15 text-rose-400">data-thumbnail</span><span class="text-white/90">=</span><span class="text-lime-400">"/phonk-thumb.png"</span>
+														<span class="ml-15 text-rose-400">data-figure</span><span class="text-white/90">=</span><span class="text-lime-400">"/phonk-fig.png"</span><span>&gt;</span>
+														<span class="ml-15 text-white/50 select-none">and many more features...</span>
+														<span class="ml-10 text-white/90">&lt;sonix-player/&gt;</span>
+														<span class="ml-5">);</span>
+														<span>}</span>
+
+														<span class="text-blue-400">export </span><span class="text-blue-400">default </span><span class="text-rose-400">MyPlayer</span>
+											</code>
+										</pre>
+									</div>
+									<!--  -->
+									<div
+										class="code-block-inner"
+										data-index="3">
+										<pre>
+											<code>
+												<span class="text-white/50 select-none">Add this in your HTML head</span>
+												<span class="text-[#569cd6]">&lt;link</span>
+												<span class="ml-5 text-[#9cdcfe]">rel</span>=<span class="text-[#ce9178]">"stylesheet"</span>
+												<span class="ml-5 text-[#9cdcfe]">href</span>=<span class="text-[#ce9178]">"https://unpkg.com/sonix-player@1.6.2/dist/sonix-player.css"</span><span class="text-[#569cd6]">/&gt;</span>
+												<span class="text-[#569cd6]">&lt;script</span>
+												<span class="ml-5 text-[#9cdcfe]">type</span>=<span class="text-[#ce9178]">"module"</span>
+												<span class="ml-5 text-[#9cdcfe]">src</span>=<span class="text-[#ce9178]">"https://unpkg.com/sonix-player@1.6.2/dist/sonix-player.js"</span><span class="text-[#569cd6]">&lt;/script&gt;</span>
+											</code>
+										</pre>
+										<pre>
+											<code>
+														<span class="text-white/50 select-none">Use the component anywhere in your app (HTML syntax)</span>
+														<span class="text-[#569cd6]">&lt;sonix-player</span>
+														<span class="ml-5 text-[#9cdcfe]">data-src</span>=<span class="text-[#ce9178]">"/phonk.mp4"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-thumbnail</span>=<span class="text-[#ce9178]">"/phonk.jpg"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-figure</span>=<span class="text-[#ce9178]">"/phonk.jpg"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-name</span>=<span class="text-[#ce9178]">"phonk"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-artist</span>=<span class="text-[#ce9178]">"phonk music"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-auto</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-volume</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-repeat</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-speed</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-max</span>=<span class="text-[#b5cea8]">"4"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-download</span>=<span class="text-[#ce9178]">"true"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-black</span>=<span class="text-[#ce9178]">"#121212"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-accent</span>=<span class="text-[#ce9178]">"#f50"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-primary</span>=<span class="text-[#ce9178]">"#121212"</span>
+														<span class="ml-5 text-[#9cdcfe]">data-secondary</span>=<span class="text-[#ce9178]">"#ccc"</span><span class="text-[#9cdcfe]">&gt;</span>
+														<span class="text-[#569cd6]">&lt;/sonix-player&gt;</span>
+											</code>
+										</pre>
+									</div>
+									<!--  -->
+								</div>
+							</div>
+						</div>
+						<!--  -->
+					</div>
+					<!--  -->
+				</div>
+				<!--  -->
+			</div>
+			<!--  -->
+			<div class="wrapper bg-gradient-to-r from-black to-neutral-800">
+				<div class="wrapper-inner">
+					<header class="flex-column gap-4 text-center mb-20">
+						<h1 class="title bg primary-gradient">Features</h1>
+					</header>
+					<div class="col-span-2 grid gap-8 grid-cols-1 md:grid-cols-12">
+						<div class="feature-box col-span-full md:col-span-6 flex-column gap-8 z-1">
+							<div
+								class="opacity-40 absolute top-10 right-5 w-30 h-30 bg-[url('/images/icons/vol-control.svg')] bg-cover bg-no-repeat z-[-1] -rotate-15"></div>
+							<div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent z-[-2]"></div>
+							<div class="absolute inset-0 bg-[url('/images/black-dots.svg')] bg-cover bg-no-repeat z-[-3]"></div>
+							<h2 class="feature-title">Volume & Speed Control</h2>
+							<p class="feature-desc">
+								Adjust playback speed and volume effortlessly with built-in controls — no extra code needed.
+							</p>
+						</div>
+						<!--  -->
+						<div class="feature-box col-span-full md:col-span-6 flex-column gap-8 z-1">
+							<div
+								class="opacity-40 absolute top-10 right-5 w-30 h-30 bg-[url('/images/icons/styling.svg')] bg-cover bg-no-repeat z-[-1] -rotate-15"></div>
+							<div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent z-[-2]"></div>
+							<div class="absolute inset-0 bg-[url('/images/black-dots.svg')] bg-cover bg-no-repeat z-[-3]"></div>
+							<h2 class="feature-title">Fully Customizable Styles</h2>
+							<p class="feature-desc">
+								Easily restyle the player with your own CSS or Tailwind classes to match your brand or theme.
+							</p>
+						</div>
+						<!--  -->
+						<div class="feature-box col-span-full md:col-span-8 flex-column gap-8 z-1">
+							<div
+								class="opacity-40 absolute top-10 right-5 w-30 h-30 bg-[url('/images/icons/empty-box.svg')] bg-cover bg-no-repeat z-[-1] -rotate-15"></div>
+							<div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent z-[-2]"></div>
+							<div class="absolute inset-0 bg-[url('/images/black-dots.svg')] bg-cover bg-no-repeat z-[-3]"></div>
+							<h2 class="feature-title">Responsive & Lightweight</h2>
+							<p class="feature-desc">
+								Designed to work seamlessly across all devices — mobile, tablet, and desktop — with minimal footprint.
+							</p>
+						</div>
+						<!--  -->
+						<div class="feature-box col-span-full md:col-span-4 flex-column gap-8 z-1">
+							<div
+								class="opacity-40 absolute top-10 right-5 w-30 h-30 bg-[url('/images/icons/attribute.svg')] bg-cover bg-no-repeat z-[-1] -rotate-15"></div>
+							<div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent z-[-2]"></div>
+							<div class="absolute inset-0 bg-[url('/images/black-dots.svg')] bg-cover bg-no-repeat z-[-3]"></div>
+							<h2 class="feature-title">Thumbnail & Metadata Support</h2>
+							<p class="feature-desc">
+								Display album art, track name, and more using simple attributes. Looks great and adds context.
+							</p>
+						</div>
+
+						<!--  -->
+						<div class="feature-box col-span-full md:col-span-4 flex-column gap-8 z-1">
+							<div
+								class="opacity-40 absolute top-10 right-5 w-30 h-30 bg-[url('/images/icons/use-easy.svg')] bg-cover bg-no-repeat z-[-1] -rotate-15"></div>
+							<div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent z-[-2]"></div>
+							<div class="absolute inset-0 bg-[url('/images/black-dots.svg')] bg-cover bg-no-repeat z-[-3]"></div>
+							<h2 class="feature-title">Easy to Use Anywhere</h2>
+							<p class="feature-desc">Framework-agnostic: Use it with React, Vue, Vite, or even plain HTML/CSS/JS.</p>
+						</div>
+						<!--  -->
+						<div class="feature-box col-span-full md:col-span-8 flex-column gap-8 z-1">
+							<div
+								class="opacity-40 absolute top-10 right-5 w-30 h-30 bg-[url('/images/icons/repeat.svg')] bg-cover bg-no-repeat z-[-1] -rotate-15"></div>
+							<div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent z-[-2]"></div>
+							<div class="absolute inset-0 bg-[url('/images/black-dots.svg')] bg-cover bg-no-repeat z-[-3]"></div>
+							<h2 class="feature-title">Repeat & Autoplay</h2>
+							<p class="feature-desc">
+								Easily enable repeat and autoplay functionality with simple attributes. Ideal for looping music or
+								auto-start playback on load.
+							</p>
+						</div>
+						<!--  -->
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="wrapper bg-gradient-to-r from-black to-neutral-800">
+				<div class="wrapper-inner">
+					<!--  -->
+					<header class="flex-column gap-4 text-center mb-20">
+						<h1 class="title bg primary-gradient">Examples</h1>
+					</header>
+					<!--  -->
+					<div class="flex-column gap-12">
+						<!--  -->
+						<div class="demo-container">
+							<!--  -->
+							<div class="demo-properties lg:col-span-1">
+								<pre class="code">
+									<code>
+													<span class="text-white/50 select-none">Use the component anywhere in your app (HTML syntax)</span>
+													<span class="text-[#569cd6]">&lt;sonix-player</span>
+													<span class="ml-5 text-[#9cdcfe]">data-src</span>=<span class="text-[#ce9178]">"/sounds/montagem.mp4"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-thumbnail</span>=<span class="text-[#ce9178]">"/images/artwork-2.jpg"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-figure</span>=<span class="text-[#ce9178]">"/images/artwork-2.jpg"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-name</span>=<span class="text-[#ce9178]">"MONTAGEM"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-artist</span>=<span class="text-[#ce9178]">"phonk music"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-max</span>=<span class="text-[#b5cea8]">"6"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-black</span>=<span class="text-[#ce9178]">"#212529"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-accent</span>=<span class="text-[#ce9178]">"#40c057"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-primary</span>=<span class="text-[#ce9178]">"#fff"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-secondary</span>=<span class="text-[#ce9178]">"#94d82d"</span><span class="text-[#569cd6]">&gt;</span>
+													<span class="text-[#569cd6]">&lt;/sonix-player&gt;</span>
+									</code>
+								</pre>
+								<button
+									class="copy-btn p-4 flex-center ml-auto mr-4"
+									tabindex="0"
+									aria-label="copy code"
+									title="copy code">
+									<ion-icon name="clipboard-outline"></ion-icon>
+									<ion-icon name="checkmark-outline"></ion-icon>
+								</button>
+							</div>
+							<!--  -->
+							<div class="demo-result lg:col-span-2">
+								<sonix-player
+									data-src="/sounds/montagem.mp4"
+									data-thumbnail="/images/artwork-2.jpg"
+									data-figure="/images/artwork-2.jpg"
+									data-name="MONTAGEM"
+									data-artist="phonk music"
+									data-max="6"
+									data-black="#212529"
+									data-accent="#40c057"
+									data-primary="#fff"
+									data-secondary="#94d82d">
+								</sonix-player>
+							</div>
+							<!--  -->
+						</div>
+						<!--  -->
+						<div class="demo-container">
+							<!--  -->
+							<div class="demo-result">
+								<sonix-player
+									data-src="/sounds/brevis.mp4"
+									data-figure="/images/artwork.jpg"
+									data-artist="Dragon Boys"
+									data-name="brevis"
+									data-volume="false"
+									data-repeat="false"
+									data-speed="false"
+									data-download="false"
+									data-black="#343a40"
+									data-accent="#f03e3e"
+									data-primary="#e9ecef"
+									data-secondary="#845ef7">
+								</sonix-player>
+							</div>
+							<!--  -->
+							<div class="demo-properties max-lg:order-[-1]">
+								<pre class="code">
+									<code>
+													<span class="text-white/50 select-none">Use the component anywhere in your app (HTML syntax)</span>
+													<span class="text-[#569cd6]">&lt;sonix-player</span>
+													<span class="ml-5 text-[#9cdcfe]">data-src</span>=<span class="text-[#ce9178]">"/sounds/montagem.mp4"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-figure</span>=<span class="text-[#ce9178]">"/images/artwork-2.jpg"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-artist</span>=<span class="text-[#ce9178]">"phonk music"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-name</span>=<span class="text-[#ce9178]">"MONTAGEM"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-volume</span>=<span class="text-[#ce9178]">"false"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-repeat</span>=<span class="text-[#ce9178]">"false"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-speed</span>=<span class="text-[#ce9178]">"false"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-download</span>=<span class="text-[#b5cea8]">"false"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-black</span>=<span class="text-[#ce9178]">"#343a40"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-accent</span>=<span class="text-[#ce9178]">"#f03e3e"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-primary</span>=<span class="text-[#ce9178]">"#e9ecef"</span>
+													<span class="ml-5 text-[#9cdcfe]">data-secondary</span>=<span class="text-[#ce9178]">"#845ef7"</span><span class="text-[#569cd6]">&gt;</span>
+													<span class="text-[#569cd6]">&lt;/sonix-player&gt;</span>
+									</code>
+								</pre>
+								<button
+									class="copy-btn p-4 flex-center ml-auto mr-4"
+									tabindex="0"
+									aria-label="copy code"
+									title="copy code">
+									<ion-icon name="clipboard-outline"></ion-icon>
+									<ion-icon name="checkmark-outline"></ion-icon>
+								</button>
+							</div>
+							<!--  -->
+							<div class="flex-center ml-0 lg:ml-4">
+								<figure class="sonix-thumb primary-gradient">
+									<img
+										src="/images/sonix-thumb.png"
+										alt="sonix Thumbnail"
+										loading="lazy" />
+									<figcaption>Build with</figcaption>
+								</figure>
+							</div>
+							<!--  -->
+						</div>
+						<!--  -->
+					</div>
+					<!--  -->
+				</div>
+
+				<!--  -->
+			</div>
+			<!--  -->
+			<div class="wrapper bg-gradient-to-r from-black to-neutral-800">
+				<div class="wrapper-inner">
+					<header class="flex-column gap-4 text-center mb-20">
+						<h1 class="title bg primary-gradient">Attributes</h1>
+					</header>
+					<div class="overflow-x-auto">
+						<table class="w-full border-collapse">
+							<thead>
+								<tr class="bg-neutral-800">
+									<th class="p-4 text-left border border-neutral-700">Attribute</th>
+									<th class="p-4 text-left border border-neutral-700">Description</th>
+									<th class="p-4 text-left border border-neutral-700">Example and Default Value</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-src</code></td>
+									<td class="p-4 border border-neutral-700">Audio file source</td>
+									<td class="p-4 border border-neutral-700"><code>/music.mp3</code> - hidden</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-thumbnail</code></td>
+									<td class="p-4 border border-neutral-700">Thumbnail Image on player top</td>
+									<td class="p-4 border border-neutral-700"><code>/cover.png</code> - hidden</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-figure</code></td>
+									<td class="p-4 border border-neutral-700">Figure of track Image</td>
+									<td class="p-4 border border-neutral-700"><code>/img.png</code> - hidden</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-artist</code></td>
+									<td class="p-4 border border-neutral-700">Track Artist name</td>
+									<td class="p-4 border border-neutral-700"><code>Linkin Park</code> - hidden</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-name</code></td>
+									<td class="p-4 border border-neutral-700">Track name</td>
+									<td class="p-4 border border-neutral-700"><code>Let the end</code> - hidden</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-auto</code></td>
+									<td class="p-4 border border-neutral-700">Auto Play audio then loaded</td>
+									<td class="p-4 border border-neutral-700"><code>true or false</code> - false</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-volume</code></td>
+									<td class="p-4 border border-neutral-700">Show Volume Control Button</td>
+									<td class="p-4 border border-neutral-700"><code>true or false</code> - true</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-repeat</code></td>
+									<td class="p-4 border border-neutral-700">Show Repeat Control Button</td>
+									<td class="p-4 border border-neutral-700"><code>true or false</code> - true</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-speed</code></td>
+									<td class="p-4 border border-neutral-700">Show Speed Button</td>
+									<td class="p-4 border border-neutral-700"><code>true or false</code> - true</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-max</code></td>
+									<td class="p-4 border border-neutral-700">Max Speed for Speed Control Button</td>
+									<td class="p-4 border border-neutral-700"><code>number</code> - 2</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-download</code></td>
+									<td class="p-4 border border-neutral-700">Show Download Track Button</td>
+									<td class="p-4 border border-neutral-700"><code>true or false</code> - true</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-black</code></td>
+									<td class="p-4 border border-neutral-700">Player black color</td>
+									<td class="p-4 border border-neutral-700"><code>color</code> - #121212</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-accent</code></td>
+									<td class="p-4 border border-neutral-700">Player accent color</td>
+									<td class="p-4 border border-neutral-700"><code>color</code> - #fff</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-primary</code></td>
+									<td class="p-4 border border-neutral-700">Player primary color</td>
+									<td class="p-4 border border-neutral-700"><code>color</code> - #303030</td>
+								</tr>
+								<tr class="hover:bg-neutral-800/50">
+									<td class="p-4 border border-neutral-700"><code>data-secondary</code></td>
+									<td class="p-4 border border-neutral-700">Player secondary color</td>
+									<td class="p-4 border border-neutral-700"><code>color</code> - #ff4600</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="wrapper bg-gradient-to-r from-black to-neutral-800">
+				<div class="wrapper-inner">
+					<div class="grid gap-8 grid-cols-1 grid-rows-1 lg:grid-rows-2 lg:grid-cols-3">
+						<div class="helper-box flex-column gap-8 lg:row-span-2 lg:col-span-2 z-1">
+							<div class="absolute inset-0 bg-[url('/images/black-dots.svg')] bg-cover bg-no-repeat z-[-1]"></div>
+							<div class="absolute inset-0 bg-gradient-to-l from-black/80 via-black to-transparent z-[-1]"></div>
+							<h3 class="my-5 font-semibold tracking-wider text-center text-white/80 text-2xl md:text-7xl">
+								UNPKG links
+							</h3>
+							<div class="flex-column gap-12 mt-auto">
+								<div class="flex-column gap-4">
+									<p class="text-white/70">style.css.min</p>
+									<pre class="pre flex-between-center gap-4">
+										<code class="code p-4 truncate text-ellipsis">
+											<span class="text-lime-500">https://unpkg.com/sonix-player@1.6.2/dist/sonix-player.css</span>
+										</code>
+										<button
+											class="copy-btn p-4 flex-center"
+											tabindex="0"
+											aria-label="copy code"
+											title="copy code">
+											<ion-icon name="clipboard-outline"></ion-icon>
+											<ion-icon name="checkmark-outline"></ion-icon>
+										</button>
+									</pre>
+								</div>
+								<!--  -->
+								<div class="flex-column gap-4">
+									<p class="text-white/70">sonix-player.js.min</p>
+									<pre class="pre flex-between-center gap-4">
+										<code class="code p-4 truncate text-ellipsis">
+											<span class="text-lime-500">https://unpkg.com/sonix-player@1.6.2/dist/sonix-player.js</span>
+										</code>
+										<button
+											class="copy-btn p-4 flex-center"
+											tabindex="0"
+											aria-label="copy code"
+											title="copy code">
+											<ion-icon name="clipboard-outline"></ion-icon>
+											<ion-icon name="checkmark-outline"></ion-icon>
+										</button>
+									</pre>
+								</div>
+							</div>
+						</div>
+						<!--  -->
+						<div class="helper-box flex-column gap-8 lg:col-span-1 z-1">
+							<div class="absolute inset-0 bg-[url('/images/black-dots.svg')] bg-cover bg-no-repeat z-[-1]"></div>
+							<div class="absolute inset-0 bg-gradient-to-l from-black/80 via-black to-transparent z-[-1]"></div>
+							<h3 class="mb-5 font-semibold tracking-wider text-white/80 text-2xl md:text-4xl">With NPM</h3>
+							<div class="flex-column gap-12">
+								<div class="flex-column gap-4">
+									<p class="text-white/70">for vite apps or react</p>
+									<pre class="pre flex-between-center gap-4">
+										<code class="code truncate text-ellipsis p-4">
+											<span class="text-lime-500">npm 
+												<span>i</span>
+											</span>
+											<span>sonix-player</span>
+										</code>
+										<button
+											class="copy-btn p-4 flex-center"
+											tabindex="0"
+											aria-label="copy code"
+											title="copy code">
+											<ion-icon name="clipboard-outline"></ion-icon>
+											<ion-icon name="checkmark-outline"></ion-icon>
+										</button>
+									</pre>
+								</div>
+							</div>
+							<!--  -->
+						</div>
+						<!--  -->
+						<div class="helper-box flex-column gap-8 lg:col-span-1 z-1">
+							<div class="absolute inset-0 bg-[url('/images/black-dots.svg')] bg-cover bg-no-repeat z-[-1]"></div>
+							<div class="absolute inset-0 bg-gradient-to-l from-black/80 via-black to-transparent z-[-1]"></div>
+							<h3 class="mb-5 font-semibold tracking-wider text-white/80 text-2xl md:text-4xl">Clone it</h3>
+							<div class="flex-column gap-12">
+								<div class="flex-column gap-4">
+									<p class="text-white/70">clone and run locally:</p>
+									<pre class="pre flex-between-center gap-4">
+										<code class="code truncate text-ellipsis p-4">
+											<span class="text-lime-500">git 
+												<span>clone</span>
+											</span>
+											<span>https://github.com/AnuXiii/sonix-player</span>
+										</code>
+										<button
+											class="copy-btn p-4 flex-center"
+											tabindex="0"
+											aria-label="copy code"
+											title="copy code">
+											<ion-icon name="clipboard-outline"></ion-icon>
+											<ion-icon name="checkmark-outline"></ion-icon>
+										</button>
+									</pre>
+								</div>
+							</div>
+							<!--  -->
+						</div>
+						<!--  -->
+						<div class="helper-box w-full mx-auto flex-column gap-8 lg:w-1/2 lg:col-span-3 z-1">
+							<div
+								class="absolute top-4 left-1/2 -translate-x-1/2 inset-0 bg-[url('/images/icons/github.svg')] w-42 h-42 bg-cover bg-no-repeat z-[-1] drop-shadow-2xl drop-shadow-primary/50 scale-110 opacity-30"></div>
+							<div class="absolute inset-0 bg-gradient-to-l from-black/80 via-transparent to-black z-[-1]"></div>
+							<h3 class="text-center mb-5 font-semibold tracking-wider text-white/80 text-2xl md:text-4xl">
+								GitHub Info
+							</h3>
+							<div class="flex-between-center gap-8 max-md:flex-col">
+								<a
+									href="https://github.com/AnuXiii/sonix-player"
+									target="_blank"
+									title="see sonix-player github page"
+									aria-label="see sonix-player github page"
+									class="text-white/70 text-xl flex-center gap-2 duration-200 hover:text-white">
+									<span>sonix-player github-page</span>
+									<ion-icon
+										name="link-outline"
+										class="mt-2"></ion-icon>
+								</a>
+								<div
+									id="github-stars"
+									class="bg-amber-400 p-2 shadow-2xl shadow-amber-400/40 rounded-lg text-black font-mono flex-center gap-1"></div>
+							</div>
+							<!--  -->
+						</div>
+						<!--  -->
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<footer class="relative bg-gradient-to-r from-black to-neutral-800 z-1">
+				<div class="absolute inset-0 w-full bg-[url('/images/sound-effect.png')] bg-contain opacity-20 z-[-1]"></div>
+				<div class="wrapper-inner pt-10 md:pt-30">
+					<div class="flex-between-center gap-8 text-lg text-white/90 max-md:flex-col">
+						<p>sonix-player v-<span class="font-mono">1.6.2</span></p>
+						<p class="font-bold"><span class="font-mono">MIT &copy; AnuXiii</span></p>
+						<a
+							href="https://instagram.com/mahdi.anuxi"
+							target="_blank"
+							title="contact on i.g page"
+							aria-label="contact on i.g page"
+							class="font-bold duration-200 hover:text-white">
+							Contact Me
+						</a>
+					</div>
+				</div>
+			</footer>
+			<!--  -->
+		</div>
+
+		<!--  -->
+		<script
+			type="module"
+			src="/src/main.js"></script>
+	</body>
+</html>

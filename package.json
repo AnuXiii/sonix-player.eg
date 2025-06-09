@@ -1,0 +1,19 @@
+{
+  "name": "sonix-eg",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "sonix-player": "^1.5.1",
+    "tailwindcss": "^4.1.8"
+  }
+}
