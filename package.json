@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.8",
-		"sonix-player": "^1.6.3",
+		"sonix-player": "^1.6.4",
 		"tailwindcss": "^4.1.8"
 	}
 }
